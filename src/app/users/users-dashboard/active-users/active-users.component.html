@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4" *ngFor="let user of activeUsers">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4><u>{{user.name}}</u></h4>
+                            <p>{{user.email}}</p>
+                            <p>{{user.address.suite}}, {{user.address.street}}, {{user.address.city}}, zipCode : {{user.address.zipcode}}</p>
+                            <p class="mb-0">{{user.phone}}</p>
+                            <a [href]="user.website">{{user.website}}</a>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="font-weight-bold">Company Details -</span>
+                            <p>{{user.company.name}}</p>
+                            <p>Company tagline : {{user.company.catchPhrase}}</p>
+                            <p>Business Strategy : {{user.company.bs}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
